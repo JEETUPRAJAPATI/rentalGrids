@@ -1,0 +1,93 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: 240 10% 3.9%;
+  --foreground: 0 0% 98%;
+  --muted: 240 3.7% 15.9%;
+  --muted-foreground: 240 5% 64.9%;
+  --popover: 240 10% 3.9%;
+  --popover-foreground: 0 0% 98%;
+  --card: 240 10% 3.9%;
+  --card-foreground: 0 0% 98%;
+  --border: 240 3.7% 15.9%;
+  --input: 240 3.7% 15.9%;
+  --primary: 270 84% 60%;  /* Adjusted for purple */
+  --primary-foreground: 0 0% 100%;
+  --secondary: 240 3.7% 15.9%;
+  --secondary-foreground: 0 0% 98%;
+  --accent: 315 78% 65%;   /* Adjusted for pink/purple accent */
+  --accent-foreground: 0 0% 98%;
+  --destructive: 0 62.8% 30.6%;
+  --destructive-foreground: 0 0% 98%;
+  --ring: 240 4.9% 83.9%;
+  --radius: 0.5rem;
+  
+  /* Chart colors */
+  --chart-1: var(--primary);
+  --chart-2: var(--accent);
+  --chart-3: 262 83% 58%;
+  --chart-4: 231 91% 69%;
+  --chart-5: 175 94% 58%;
+  
+  /* Sidebar colors, not used in this project but required by Tailwind config */
+  --sidebar-background: var(--background);
+  --sidebar-foreground: var(--foreground);
+  --sidebar-primary: var(--primary);
+  --sidebar-primary-foreground: var(--primary-foreground);
+  --sidebar-accent: var(--accent);
+  --sidebar-accent-foreground: var(--accent-foreground);
+  --sidebar-border: var(--border);
+  --sidebar-ring: var(--ring);
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply font-sans antialiased bg-background text-foreground;
+    background-color: #0a0a0a;
+  }
+}
+
+@layer components {
+  .glass-card {
+    @apply rounded-xl border border-white/10 backdrop-blur-lg bg-opacity-50 bg-[#1a1a24]/50;
+  }
+  
+  .gradient-text {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-purple-600 to-pink-500;
+  }
+  
+  .gradient-bg {
+    @apply bg-gradient-to-r from-purple-600 to-pink-500;
+  }
+  
+  .form-input {
+    @apply bg-[#1a1a24]/70 border border-white/10 text-foreground rounded-md py-3 px-4 w-full transition duration-300 focus:outline-none focus:border-purple-500 focus:ring-2 focus:ring-purple-500/30;
+  }
+  
+  .btn-gradient {
+    @apply bg-gradient-to-r from-purple-600 to-pink-500 text-white font-semibold rounded-md py-3 px-6 transition duration-300 hover:opacity-90 hover:translate-y-[-2px] hover:shadow-lg hover:shadow-purple-500/20;
+  }
+}
+
+/* Extra styles for animations */
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
