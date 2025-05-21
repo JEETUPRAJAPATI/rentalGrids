@@ -237,10 +237,12 @@ const ComingSoonSection = () => {
                   width: "100%",
                   height: "auto",
                   aspectRatio: "3/2",
+                  position: "relative"
                 }}
                 controls={false}
                 loop
                 autoPlay
+                acknowledgeRemotionLicense={true}
               />
             </div>
           </motion.div>

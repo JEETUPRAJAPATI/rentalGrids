@@ -915,10 +915,12 @@ const VideoShowcaseSection = () => {
                 style={{
                   width: "100%",
                   height: "auto",
+                  position: "relative"
                 }}
                 controls={false}
                 loop
                 autoPlay
+                acknowledgeRemotionLicense={true}
               />
             </div>
 
