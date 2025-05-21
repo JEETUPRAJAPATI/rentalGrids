@@ -6,12 +6,13 @@ import ProblemSection from '@/components/ProblemSection';
 import SolutionSection from '@/components/SolutionSection';
 import UrgencySection from '@/components/UrgencySection';
 import WhoItsForSection from '@/components/WhoItsForSection';
-import PricingSection from '@/components/PricingSection';
 import TestimonialsSection from '@/components/TestimonialsSection';
 import BenefitsSection from '@/components/BenefitsSection';
 import FAQSection from '@/components/FAQSection';
 import FinalCTA from '@/components/FinalCTA';
 import Footer from '@/components/Footer';
+import VideoShowcaseSection from '@/components/VideoShowcaseSection';
+import ComingSoonSection from '@/components/ComingSoonSection';
 
 const Home = () => {
   // Smooth scrolling for anchor links
@@ -53,9 +54,10 @@ const Home = () => {
       <Hero />
       <ProblemSection />
       <SolutionSection />
+      <VideoShowcaseSection />
       <UrgencySection />
       <WhoItsForSection />
-      <PricingSection />
+      <ComingSoonSection />
       <TestimonialsSection />
       <BenefitsSection />
       <FAQSection />
