@@ -1,18 +1,15 @@
 import { useEffect } from 'react';
 import { motion } from 'framer-motion';
 import Navbar from '@/components/Navbar';
-import Hero from '@/components/Hero';
+import AnimatedHeroSection from '@/components/AnimatedHeroSection';
 import ProblemSection from '@/components/ProblemSection';
 import SolutionSection from '@/components/SolutionSection';
-import UrgencySection from '@/components/UrgencySection';
 import WhoItsForSection from '@/components/WhoItsForSection';
-import TestimonialsSection from '@/components/TestimonialsSection';
-import BenefitsSection from '@/components/BenefitsSection';
 import FAQSection from '@/components/FAQSection';
 import FinalCTA from '@/components/FinalCTA';
 import Footer from '@/components/Footer';
-import VideoShowcaseSection from '@/components/VideoShowcaseSection';
-import ComingSoonSection from '@/components/ComingSoonSection';
+import InstagramStyleVideo from '@/components/InstagramStyleVideo';
+import AnimatedFeatures from '@/components/AnimatedFeatures';
 
 const Home = () => {
   // Smooth scrolling for anchor links
@@ -51,15 +48,12 @@ const Home = () => {
       exit={{ opacity: 0 }}
     >
       <Navbar />
-      <Hero />
+      <AnimatedHeroSection />
       <ProblemSection />
+      <AnimatedFeatures />
+      <InstagramStyleVideo />
       <SolutionSection />
-      <VideoShowcaseSection />
-      <UrgencySection />
       <WhoItsForSection />
-      <ComingSoonSection />
-      <TestimonialsSection />
-      <BenefitsSection />
       <FAQSection />
       <FinalCTA />
       <Footer />
