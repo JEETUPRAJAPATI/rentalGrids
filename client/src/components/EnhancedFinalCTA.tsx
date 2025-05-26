@@ -38,12 +38,12 @@ const EnhancedFinalCTA = () => {
         {/* Gradient blobs */}
         <motion.div
           className="absolute top-1/4 right-1/4 w-[500px] h-[500px] rounded-full bg-purple-600/10 filter blur-[100px]"
-          animate={{ 
+          animate={{
             scale: [1, 1.1, 1],
             x: [0, -30, 0],
-            y: [0, 20, 0] 
+            y: [0, 20, 0]
           }}
-          transition={{ 
+          transition={{
             duration: 15,
             repeat: Infinity,
             repeatType: "reverse",
@@ -52,12 +52,12 @@ const EnhancedFinalCTA = () => {
         />
         <motion.div
           className="absolute bottom-1/4 left-1/4 w-[400px] h-[400px] rounded-full bg-pink-600/10 filter blur-[100px]"
-          animate={{ 
+          animate={{
             scale: [1.1, 1, 1.1],
             x: [0, 30, 0],
-            y: [0, -20, 0] 
+            y: [0, -20, 0]
           }}
-          transition={{ 
+          transition={{
             duration: 18,
             repeat: Infinity,
             repeatType: "reverse",
@@ -92,7 +92,7 @@ const EnhancedFinalCTA = () => {
         ))}
       </div>
 
-      <motion.div 
+      <motion.div
         className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8"
         style={{ opacity, scale }}
       >
@@ -102,7 +102,7 @@ const EnhancedFinalCTA = () => {
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ 
+          transition={{
             duration: 0.8,
             type: "spring",
             damping: 20
@@ -135,7 +135,7 @@ const EnhancedFinalCTA = () => {
                   viewport={{ once: true }}
                   transition={{ duration: 0.5 }}
                 >
-                  <motion.div 
+                  <motion.div
                     className="flex items-center gap-2 mb-6"
                     initial={{ opacity: 0, x: -20 }}
                     whileInView={{ opacity: 1, x: 0 }}
@@ -308,7 +308,7 @@ const EnhancedFinalCTA = () => {
                           <motion.button
                             type="submit"
                             className="w-full btn-gradient flex items-center justify-center gap-2 py-3"
-                            whileHover={{ 
+                            whileHover={{
                               scale: 1.02,
                               boxShadow: "0 0 20px rgba(168, 85, 247, 0.4)",
                             }}
@@ -341,54 +341,7 @@ const EnhancedFinalCTA = () => {
           </div>
         </motion.div>
 
-        {/* Trust indicators */}
-        <motion.div
-          className="mt-16 flex flex-wrap justify-center gap-8"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5, delay: 0.5 }}
-        >
-          {[
-            {
-              img: "https://images.unsplash.com/photo-1599305445671-ac291c95aaa9?ixlib=rb-4.0.3&auto=format&fit=crop&w=120&h=120",
-              title: "Featured In",
-              name: "TechCrunch",
-            },
-            {
-              img: "https://images.unsplash.com/photo-1560179707-f14e90ef3623?ixlib=rb-4.0.3&auto=format&fit=crop&w=120&h=120",
-              title: "Partner",
-              name: "YCombinator",
-            },
-            {
-              img: "https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7?ixlib=rb-4.0.3&auto=format&fit=crop&w=120&h=120",
-              title: "Award",
-              name: "AI Innovation 2023",
-            },
-          ].map((item, i) => (
-            <motion.div
-              key={i}
-              className="flex items-center gap-3 glass-card backdrop-blur-sm p-3 rounded-full"
-              initial={{ opacity: 0, y: 10 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.3, delay: 0.6 + i * 0.1 }}
-              whileHover={{ y: -5, boxShadow: "0 10px 25px rgba(0, 0, 0, 0.1)" }}
-            >
-              <div className="w-10 h-10 rounded-full overflow-hidden">
-                <img
-                  src={item.img}
-                  alt={item.name}
-                  className="w-full h-full object-cover"
-                />
-              </div>
-              <div>
-                <div className="text-xs text-gray-400">{item.title}</div>
-                <div className="text-sm font-medium">{item.name}</div>
-              </div>
-            </motion.div>
-          ))}
-        </motion.div>
+
       </motion.div>
     </section>
   );

@@ -93,7 +93,7 @@ const EnhancedHeroSection = () => {
     visible: {
       opacity: 1,
       y: 0,
-      transition: { 
+      transition: {
         type: "spring",
         damping: 12,
         stiffness: 100
@@ -103,8 +103,8 @@ const EnhancedHeroSection = () => {
 
   const fadeUpVariants: Variants = {
     hidden: { opacity: 0, y: 20 },
-    visible: { 
-      opacity: 1, 
+    visible: {
+      opacity: 1,
       y: 0,
       transition: {
         type: "spring",
@@ -116,8 +116,8 @@ const EnhancedHeroSection = () => {
 
   const cardVariants: Variants = {
     hidden: { opacity: 0, y: 50 },
-    visible: { 
-      opacity: 1, 
+    visible: {
+      opacity: 1,
       y: 0,
       transition: {
         type: "spring",
@@ -196,16 +196,16 @@ const EnhancedHeroSection = () => {
             }}
           />
         ))}
-        
+
         {/* Gradient blobs */}
         <motion.div
           className="absolute top-1/4 left-1/4 w-[600px] h-[600px] rounded-full bg-purple-600/10 filter blur-[100px]"
-          animate={{ 
+          animate={{
             scale: [1, 1.2, 1],
             x: [0, 50, 0],
-            y: [0, -30, 0] 
+            y: [0, -30, 0]
           }}
-          transition={{ 
+          transition={{
             duration: 20,
             repeat: Infinity,
             repeatType: "reverse",
@@ -214,12 +214,12 @@ const EnhancedHeroSection = () => {
         />
         <motion.div
           className="absolute bottom-1/4 right-1/4 w-[500px] h-[500px] rounded-full bg-pink-600/10 filter blur-[100px]"
-          animate={{ 
+          animate={{
             scale: [1.1, 0.9, 1.1],
             x: [0, -50, 0],
-            y: [0, 40, 0] 
+            y: [0, 40, 0]
           }}
-          transition={{ 
+          transition={{
             duration: 18,
             repeat: Infinity,
             repeatType: "reverse",
@@ -304,7 +304,7 @@ const EnhancedHeroSection = () => {
             <motion.p
               className="text-xl text-gray-300 mb-8 max-w-xl"
               variants={fadeUpVariants}
-              initial="hidden" 
+              initial="hidden"
               animate="visible"
               transition={{ delay: 0.6 }}
             >
@@ -326,16 +326,16 @@ const EnhancedHeroSection = () => {
                 <motion.div
                   key={i}
                   className="text-center bg-white/5 backdrop-blur-lg border border-white/10 px-4 py-3 rounded-xl"
-                  whileHover={{ 
+                  whileHover={{
                     scale: 1.05,
                     backgroundColor: "rgba(255, 255, 255, 0.1)",
-                    transition: { duration: 0.2 } 
+                    transition: { duration: 0.2 }
                   }}
                   initial={{ opacity: 0, y: 20 }}
-                  animate={{ 
-                    opacity: 1, 
+                  animate={{
+                    opacity: 1,
                     y: 0,
-                    transition: { delay: 0.9 + (i * 0.1) } 
+                    transition: { delay: 0.9 + (i * 0.1) }
                   }}
                 >
                   <div className="flex items-center justify-center mb-1">
@@ -389,7 +389,7 @@ const EnhancedHeroSection = () => {
             <motion.div
               className="perspective-[1000px]"
               style={{
-                transform: isHovered 
+                transform: isHovered
                   ? `rotateY(${(mousePosition.x - 0.5) * 10}deg) rotateX(${-(mousePosition.y - 0.5) * 10}deg)`
                   : "rotateY(0deg) rotateX(0deg)",
                 transformStyle: "preserve-3d",
@@ -406,10 +406,10 @@ const EnhancedHeroSection = () => {
                     "radial-gradient(circle at 40% 60%, rgba(168, 85, 247, 0.3), transparent 70%)",
                   ],
                 }}
-                transition={{ 
-                  duration: 5, 
+                transition={{
+                  duration: 5,
                   repeat: Infinity,
-                  repeatType: "reverse" 
+                  repeatType: "reverse"
                 }}
                 style={{
                   opacity: isHovered ? 1 : 0,
@@ -425,7 +425,7 @@ const EnhancedHeroSection = () => {
                 initial="hidden"
                 animate="visible"
                 whileHover="hover"
-                style={{ 
+                style={{
                   transformStyle: "preserve-3d",
                   transform: "translateZ(0px)"
                 }}
@@ -487,9 +487,9 @@ const EnhancedHeroSection = () => {
                         className="mb-6"
                         style={{ transformStyle: "preserve-3d", transform: "translateZ(20px)" }}
                       >
-                        <motion.div 
+                        <motion.div
                           className="w-12 h-12 gradient-bg rounded-full flex items-center justify-center mx-auto mb-4"
-                          animate={{ 
+                          animate={{
                             boxShadow: [
                               "0 0 0 rgba(168, 85, 247, 0.4)",
                               "0 0 20px rgba(168, 85, 247, 0.6)",
@@ -619,9 +619,9 @@ const EnhancedHeroSection = () => {
                             type="submit"
                             className="glow-button btn-gradient w-full flex items-center justify-center gap-2 py-3"
                             disabled={mutation.isPending}
-                            whileHover={{ 
+                            whileHover={{
                               scale: 1.03,
-                              boxShadow: "0 0 30px rgba(168, 85, 247, 0.5)" 
+                              boxShadow: "0 0 30px rgba(168, 85, 247, 0.5)"
                             }}
                             whileTap={{ scale: 0.97 }}
                           >
@@ -629,10 +629,10 @@ const EnhancedHeroSection = () => {
                               <motion.div
                                 className="w-5 h-5 border-t-2 border-white rounded-full"
                                 animate={{ rotate: 360 }}
-                                transition={{ 
-                                  duration: 1, 
+                                transition={{
+                                  duration: 1,
                                   repeat: Infinity,
-                                  ease: "linear" 
+                                  ease: "linear"
                                 }}
                               />
                             ) : (
@@ -653,11 +653,11 @@ const EnhancedHeroSection = () => {
             {/* Decorative elements around the form */}
             <motion.div
               className="absolute -top-4 -right-4 w-8 h-8 rounded-full bg-purple-500/30 backdrop-blur-lg z-20"
-              animate={{ 
+              animate={{
                 y: [-10, 10, -10],
                 opacity: [0.7, 1, 0.7]
               }}
-              transition={{ 
+              transition={{
                 duration: 5,
                 repeat: Infinity,
                 ease: "easeInOut"
@@ -665,11 +665,11 @@ const EnhancedHeroSection = () => {
             />
             <motion.div
               className="absolute -bottom-4 -left-4 w-8 h-8 rounded-full bg-pink-500/30 backdrop-blur-lg z-20"
-              animate={{ 
+              animate={{
                 y: [10, -10, 10],
                 opacity: [0.7, 1, 0.7]
               }}
-              transition={{ 
+              transition={{
                 duration: 5,
                 repeat: Infinity,
                 ease: "easeInOut",
@@ -696,10 +696,10 @@ const EnhancedHeroSection = () => {
           <motion.div
             className="w-1 h-2 bg-gray-400 rounded-full"
             animate={{ y: [0, 4, 0] }}
-            transition={{ 
-              duration: 1.5, 
+            transition={{
+              duration: 1.5,
               repeat: Infinity,
-              repeatType: "reverse" 
+              repeatType: "reverse"
             }}
           />
         </motion.div>

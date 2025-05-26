@@ -55,25 +55,25 @@ const Hero = () => {
     <section id="hero" className="pt-28 pb-20 relative overflow-hidden">
       {/* Background gradient blobs */}
       <div className="absolute top-0 left-0 w-full h-full overflow-hidden -z-10">
-        <motion.div 
+        <motion.div
           className="absolute top-0 left-1/4 w-96 h-96 bg-purple-500/20 rounded-full filter blur-3xl"
-          animate={{ 
+          animate={{
             x: [0, 20, 0],
             y: [0, 15, 0]
           }}
-          transition={{ 
+          transition={{
             duration: 10,
             repeat: Infinity,
             repeatType: "reverse"
           }}
         />
-        <motion.div 
+        <motion.div
           className="absolute bottom-0 right-1/4 w-96 h-96 bg-pink-500/20 rounded-full filter blur-3xl"
-          animate={{ 
+          animate={{
             x: [0, -20, 0],
             y: [0, -15, 0]
           }}
-          transition={{ 
+          transition={{
             duration: 8,
             repeat: Infinity,
             repeatType: "reverse"
@@ -94,9 +94,9 @@ const Hero = () => {
             <p className="text-lg text-gray-300 mb-8">
               Join the future of stress-free, smart rentals. Get early access to India's first AI-powered rental platform.
             </p>
-            
+
             {/* Hero CTA Form */}
-            <motion.div 
+            <motion.div
               className="glass-card p-6 mb-6"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -115,10 +115,10 @@ const Hero = () => {
                   <div className="grid grid-cols-1 gap-4">
                     <div>
                       <label htmlFor="name" className="block text-sm font-medium text-gray-300 mb-1">Full Name</label>
-                      <input 
-                        type="text" 
-                        id="name" 
-                        placeholder="Enter your full name" 
+                      <input
+                        type="text"
+                        id="name"
+                        placeholder="Enter your full name"
                         className={`form-input ${errors.name ? "border-red-500" : ""}`}
                         {...register("name")}
                       />
@@ -128,10 +128,10 @@ const Hero = () => {
                     </div>
                     <div>
                       <label htmlFor="email" className="block text-sm font-medium text-gray-300 mb-1">Email Address</label>
-                      <input 
-                        type="email" 
-                        id="email" 
-                        placeholder="Enter your email" 
+                      <input
+                        type="email"
+                        id="email"
+                        placeholder="Enter your email"
                         className={`form-input ${errors.email ? "border-red-500" : ""}`}
                         {...register("email")}
                       />
@@ -141,10 +141,10 @@ const Hero = () => {
                     </div>
                     <div>
                       <label htmlFor="phone" className="block text-sm font-medium text-gray-300 mb-1">Phone Number</label>
-                      <input 
-                        type="tel" 
-                        id="phone" 
-                        placeholder="Enter your phone number" 
+                      <input
+                        type="tel"
+                        id="phone"
+                        placeholder="Enter your phone number"
                         className={`form-input ${errors.phone ? "border-red-500" : ""}`}
                         {...register("phone")}
                       />
@@ -152,8 +152,8 @@ const Hero = () => {
                         <p className="mt-1 text-sm text-red-500">{errors.phone.message}</p>
                       )}
                     </div>
-                    <button 
-                      type="submit" 
+                    <button
+                      type="submit"
                       className="btn-gradient w-full"
                       disabled={mutation.isPending}
                     >
@@ -163,7 +163,7 @@ const Hero = () => {
                 </form>
               )}
             </motion.div>
-            
+
             <div className="flex flex-wrap items-center gap-4 text-sm text-gray-400">
               <div className="flex items-center">
                 <CheckIcon className="w-4 h-4 mr-1" />
@@ -180,20 +180,20 @@ const Hero = () => {
             </div>
           </motion.div>
 
-          <motion.div 
+          <motion.div
             className="relative"
             initial={{ opacity: 0, x: 20 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6, delay: 0.3 }}
           >
-            <img 
-              src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600" 
-              alt="Modern AI-powered rental property" 
+            <img
+              src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600"
+              alt="Modern AI-powered rental property"
               className="rounded-xl shadow-2xl w-full h-auto object-cover"
             />
-            
+
             {/* Floating elements on the image */}
-            <motion.div 
+            <motion.div
               className="absolute -top-4 -right-4 glass-card px-4 py-2 rounded-lg"
               initial={{ opacity: 0, y: 10 }}
               animate={{ opacity: 1, y: 0 }}
@@ -204,8 +204,8 @@ const Hero = () => {
                 <span className="text-sm">AI-Powered</span>
               </div>
             </motion.div>
-            
-            <motion.div 
+
+            <motion.div
               className="absolute -bottom-4 -left-4 glass-card px-4 py-2 rounded-lg"
               initial={{ opacity: 0, y: -10 }}
               animate={{ opacity: 1, y: 0 }}

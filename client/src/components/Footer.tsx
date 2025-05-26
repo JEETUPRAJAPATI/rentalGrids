@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { Facebook, Twitter, Instagram, Linkedin, Mail, Phone, MapPin } from "lucide-react";
 
+import logo from '../assets/logo.png';
 const Footer = () => {
   const fadeInUp = {
     hidden: { opacity: 0, y: 20 },
@@ -10,7 +11,7 @@ const Footer = () => {
   return (
     <footer className="pt-12 pb-8 bg-[#0a0a0a] border-t border-white/5">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <motion.div 
+        <motion.div
           className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-8 mb-12"
           initial="hidden"
           whileInView="visible"
@@ -19,11 +20,16 @@ const Footer = () => {
           variants={fadeInUp}
         >
           <div className="col-span-2 lg:col-span-1">
-            <div className="flex items-center gap-2 mb-4">
-              <div className="w-10 h-10 rounded-lg gradient-bg flex items-center justify-center">
-                <span className="text-white font-bold text-lg">RG</span>
-              </div>
-              <span className="text-xl font-bold text-white">Rent Grids</span>
+            <div className="flex items-center gap-2 ">
+              <img
+                src={logo}
+                alt="Company Logo"
+                style={{
+                  height: "152px",
+                  objectFit: "contain",
+                  borderRadius: "100%"
+                }}
+              />
             </div>
             <p className="text-gray-400 mb-4">
               India's first AI-powered rental platform that eliminates brokers and makes renting simple.
@@ -43,7 +49,7 @@ const Footer = () => {
               </a>
             </div>
           </div>
-          
+
           <div>
             <h3 className="text-lg font-semibold mb-4">Platform</h3>
             <ul className="space-y-3">
@@ -53,7 +59,7 @@ const Footer = () => {
               <li><a href="#" className="text-gray-400 hover:text-white transition-colors duration-300">For Tenants</a></li>
             </ul>
           </div>
-          
+
           <div>
             <h3 className="text-lg font-semibold mb-4">Company</h3>
             <ul className="space-y-3">
@@ -63,7 +69,7 @@ const Footer = () => {
               <li><a href="#" className="text-gray-400 hover:text-white transition-colors duration-300">Contact</a></li>
             </ul>
           </div>
-          
+
           <div>
             <h3 className="text-lg font-semibold mb-4">Resources</h3>
             <ul className="space-y-3">
@@ -73,7 +79,7 @@ const Footer = () => {
               <li><a href="#" className="text-gray-400 hover:text-white transition-colors duration-300">Terms of Service</a></li>
             </ul>
           </div>
-          
+
           <div>
             <h3 className="text-lg font-semibold mb-4">Contact</h3>
             <ul className="space-y-3">
@@ -92,8 +98,8 @@ const Footer = () => {
             </ul>
           </div>
         </motion.div>
-        
-        <motion.div 
+
+        <motion.div
           className="border-t border-white/5 pt-8"
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}

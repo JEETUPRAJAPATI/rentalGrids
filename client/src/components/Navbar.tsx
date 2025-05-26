@@ -2,6 +2,7 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 import { Link } from "wouter";
 import { Menu, X } from "lucide-react";
+import logo from '../assets/logo.png';
 
 const Navbar = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -11,7 +12,7 @@ const Navbar = () => {
   };
 
   return (
-    <motion.nav 
+    <motion.nav
       className="fixed w-full z-50 bg-[#0a0a0a]/80 backdrop-blur-lg border-b border-white/10"
       initial={{ opacity: 0, y: -20 }}
       animate={{ opacity: 1, y: 0 }}
@@ -22,10 +23,16 @@ const Navbar = () => {
           <div className="flex items-center">
             <div className="flex-shrink-0">
               <div className="flex items-center gap-2">
-                <div className="w-10 h-10 rounded-lg gradient-bg flex items-center justify-center">
-                  <span className="text-white font-bold text-lg">RG</span>
-                </div>
-                <span className="text-xl font-bold text-white">Rent Grids</span>
+                {/* <span className="text-xl font-bold text-white">Rent Grids</span> */}
+                <img
+                src={logo}
+                alt="Company Logo"
+                style={{
+                  height: "152px",
+                  objectFit: "contain",
+                  borderRadius: "100%"
+                }}
+              />
               </div>
             </div>
           </div>
@@ -55,7 +62,7 @@ const Navbar = () => {
 
       {/* Mobile menu */}
       {mobileMenuOpen && (
-        <motion.div 
+        <motion.div
           className="md:hidden bg-[#0a0a0a]/95 backdrop-blur-lg"
           initial={{ opacity: 0, height: 0 }}
           animate={{ opacity: 1, height: "auto" }}

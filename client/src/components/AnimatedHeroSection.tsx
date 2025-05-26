@@ -253,7 +253,7 @@ const AnimatedHeroSection = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 1 }}
             >
-              Join the future of stress-free, smart rentals. Zero brokerage, 
+              Join the future of stress-free, smart rentals. Zero brokerage,
               AI-powered matching, and seamless digital leasing experience.
             </motion.p>
 
