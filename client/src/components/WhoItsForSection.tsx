@@ -45,14 +45,14 @@ const WhoItsForSection = () => {
   return (
     <section className="py-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <motion.div 
-          className="text-center mb-16"
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, margin: "-100px" }}
-          transition={{ duration: 0.6 }}
-          variants={fadeInUp}
-        >
+        <motion.div
+            className="text-center mb-16"
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, margin: "-100px" }}
+            transition={{ duration: 0.6 }}
+            variants={fadeInUp}
+          >
           <h2 className="text-3xl md:text-4xl font-bold mb-6">
             <span className="gradient-text">Who It's For</span>
           </h2>
@@ -63,7 +63,7 @@ const WhoItsForSection = () => {
 
         <div className="grid md:grid-cols-2 gap-12">
           {/* Landlords */}
-          <motion.div 
+          <motion.div
             className="glass-card p-8 transition-all duration-300 hover:scale-[1.02]"
             initial="hidden"
             whileInView="visible"
@@ -78,10 +78,10 @@ const WhoItsForSection = () => {
             <p className="text-center text-gray-300 mb-8">
               Get steady income, zero effort, and full control — without brokers.
             </p>
-            
+
             <div className="space-y-4">
               {landlordBenefits.map((benefit, index) => (
-                <motion.div 
+                <motion.div
                   key={index}
                   className="flex items-start"
                   initial={{ opacity: 0, y: 10 }}
@@ -102,7 +102,7 @@ const WhoItsForSection = () => {
           </motion.div>
 
           {/* Tenants */}
-          <motion.div 
+          <motion.div
             className="glass-card p-8 transition-all duration-300 hover:scale-[1.02]"
             initial="hidden"
             whileInView="visible"
@@ -117,10 +117,10 @@ const WhoItsForSection = () => {
             <p className="text-center text-gray-300 mb-8">
               Skip the fees. Apply, schedule, and lease with one click.
             </p>
-            
+
             <div className="space-y-4">
               {tenantBenefits.map((benefit, index) => (
-                <motion.div 
+                <motion.div
                   key={index}
                   className="flex items-start"
                   initial={{ opacity: 0, y: 10 }}
